@@ -7,7 +7,6 @@ import { runMobileStartup, runMobileTest } from './mobile-game.mjs';
 import { runAdsTest } from './ads-game.mjs';
 import { runSniperTest } from './sniper-game.mjs';
 import { runInteractionsTest } from './interactions-game.mjs';
-import { runZombieTest } from './zombie-game.mjs';
 import { runGraphicsTest } from './graphics-game.mjs';
 
 const root = process.cwd();
@@ -324,6 +323,7 @@ async function run() {
     } else if (command === 'interactions-test') {
       inputProbe = await runInteractionsTest(page, artifactRoot);
     } else if (command === 'enemy-test' && before.zombies) {
+      const { runZombieTest } = await import('./zombie-game.mjs');
       inputProbe = await runZombieTest(page, artifactRoot);
     } else if (command === 'enemy-test') {
       const staged = await page.evaluate(() => {
