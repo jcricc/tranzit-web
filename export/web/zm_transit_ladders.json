@@ -1,0 +1,8 @@
+{
+  "format": "ladders-v1",
+  "source": "export/web/zm_transit_collision.gltf",
+  "coordinateSystem": "three-y-up",
+  "pattern": "ladder",
+  "count": 0,
+  "volumes": []
+}

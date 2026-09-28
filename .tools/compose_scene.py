@@ -16,6 +16,7 @@ OUT = f"{ROOT}/export/web"
 MAP = sys.argv[1] if len(sys.argv) > 1 else "mp_hijacked"
 PREFIX = map_prefix(MAP)
 SRC = f"{ROOT}/export/maps/mp/{MAP}.d3dbsp"
+TEXTURES = f"textures/{MAP}" if MAP.startswith("zm_") else "textures"
 
 # ---------- binary buffer helpers ----------
 class Buf:
@@ -69,7 +70,7 @@ def add_accessor_u32(flat):
 def add_texture(png_name):
     if png_name in tex_cache:
         return tex_cache[png_name]
-    images.append({"uri": "textures/" + quote(png_name)})
+    images.append({"uri": TEXTURES + "/" + quote(png_name)})
     textures.append({"sampler": 0, "source": len(images)-1})
     tex_cache[png_name] = len(textures)-1
     return tex_cache[png_name]
@@ -107,7 +108,7 @@ def add_material(mat_name, tex_png):
     # A colour map that is actually a normal map (the dump names them *_n /
     # *_nml) would paint the surface blue; leave it untextured instead.
     normal_map_as_color = bool(tex_png) and re.search(r"_(n|nml|nrm)\.png$", tex_png) is not None
-    if tex_png and not normal_map_as_color and os.path.exists(f"{OUT}/textures/{tex_png}"):
+    if tex_png and not normal_map_as_color and os.path.exists(f"{OUT}/{TEXTURES}/{tex_png}"):
         mat["pbrMetallicRoughness"]["baseColorTexture"] = {"index": add_texture(tex_png)}
     materials.append(mat)
     return len(materials)-1

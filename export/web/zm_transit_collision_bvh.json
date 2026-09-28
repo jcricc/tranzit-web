@@ -1,0 +1,43 @@
+{
+  "format": "collision-bvh-v1",
+  "threeMeshBvhVersion": "0.9.14",
+  "source": "export/web/zm_transit_collision.gltf",
+  "binary": "zm_transit_collision_bvh.bin",
+  "coordinateSystem": "three-y-up",
+  "vertices": 1137225,
+  "triangles": 1185834,
+  "bounds": {
+    "min": [
+      -12288,
+      -2480,
+      -12506.7548828125
+    ],
+    "max": [
+      16384,
+      3008,
+      11226.1650390625
+    ]
+  },
+  "buildMilliseconds": 2514,
+  "byteLength": 37210052,
+  "layout": {
+    "position": {
+      "byteOffset": 0,
+      "byteLength": 13646700,
+      "type": "Float32Array",
+      "count": 3411675
+    },
+    "index": {
+      "byteOffset": 13646700,
+      "byteLength": 14230008,
+      "type": "Uint32Array",
+      "count": 3557502
+    },
+    "roots": [
+      {
+        "byteOffset": 27876708,
+        "byteLength": 9333344
+      }
+    ]
+  }
+}

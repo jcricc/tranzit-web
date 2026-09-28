@@ -9,6 +9,22 @@ export const DEFAULT_MAP = 'mp_hijacked';
 export const MAP_STORAGE_KEY = 'vibeslops:map';
 
 export const MAPS = Object.freeze({
+  zm_transit: Object.freeze({
+    id: 'zm_transit',
+    name: 'TranZit',
+    prefix: 'zm_transit',
+    card: null,
+    radar: null,
+    minimapSpan: 1250,
+    env: 'textures/zm_transit/env/',
+    probe: 'textures/zm_transit/probe/',
+    vision: 'zm_transit.vision.json',
+    lut: 'textures/zm_transit_lut.png',
+    fallbackSpawn: [-6785, -26, -5591],
+    navTileSize: 256,
+    sources: { sky: 'zm_transit_haze_ft', lut: 'zm_lut_win', vision: 'zm_transit_base_off' },
+    baked: true,
+  }),
   mp_hijacked: Object.freeze({
     id: 'mp_hijacked',
     name: 'Hijacked',

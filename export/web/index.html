@@ -709,6 +709,8 @@ import { ViewBob } from './view-bob.js';
 import { WeaponController } from './weapon-controller.js';
 import { WeaponEffects } from './weapon-effects.js';
 import { EnemyManager } from './enemy-system.js';
+import { ZombieInteractions } from './zombie-interactions.js';
+import { ZombieManager } from './zombie-system.js';
 import { PlayerHealth } from './player-health.js';
 import { FreeForAllMatch } from './free-for-all-match.js';
 import { MedalTracker } from './medals.js';
@@ -940,6 +942,11 @@ function applyVisionTone(material, tone) {
   material.uniforms.lift.value.fromArray(tone.lift);
   material.uniforms.highlightTint.value.fromArray(tone.highlightTint);
   material.uniforms.saturation.value = SATURATION;
+  if(activeMap.id === 'zm_transit'){
+    material.uniforms.visionAmount.value=0;
+    material.uniforms.amount.value=.35;
+    material.uniforms.saturation.value=.9;
+  }
 }
 
 function sizeGradeTarget() {
@@ -1340,6 +1347,7 @@ let navigationVisible = false;
 let collisionVisible = false;
 let pathPoints = 0;
 let enemies = null;
+let zombieInteractions = null;
 let playerHealth = null;
 let hitmarkerLife = 0;
 let hitmarkerMaxLife = 0.18;
@@ -1775,6 +1783,7 @@ function renderMatchUi() {
   const playerEntry = state.standings.find((entry) => entry.id === 'player');
   const minutes = Math.floor(state.remainingSeconds / 60);
   const seconds = String(state.remainingSeconds % 60).padStart(2, '0');
+  if (activeMap.id === 'zm_transit' && enemies) { matchStatus.textContent = `ROUND ${enemies.round} - ${enemies.aliveCount} ZOMBIES - ${enemies.economy.points} POINTS`; return; }
   matchStatus.innerHTML = `${playerEntry?.kills ?? 0} / ${state.scoreLimit} &nbsp; <small>${minutes}:${seconds} · #${playerEntry?.place ?? 1}</small>`;
 
   killfeed.replaceChildren(...state.feed.map((event) => {
@@ -2102,7 +2111,7 @@ function meleeStrike() {
   });
   if (pick) {
     const { enemy } = pick.target;
-    const applied = enemy.takeDamage(MELEE.damage, null, player);
+    const applied = enemy.takeDamage(MELEE.damage, null, player, 'melee');
     if (applied > 0) {
       showHitmarker(enemy.dead ? 'kill' : 'torso');
       weaponEffects.playHitmarker({ region: 'torso', killed: enemy.dead });
@@ -2176,7 +2185,7 @@ function onGrenadeExplode(grenade, hits) {
   if (!player) return;
   const at = grenade.position;
   for (const { actor, damage } of hits) {
-    const applied = actor.enemy?.takeDamage(damage, null, grenade.owner === player ? player : null) ?? 0;
+    const applied = actor.enemy?.takeDamage(damage, null, grenade.owner === player ? player : null, 'explosion') ?? 0;
     if (applied > 0 && grenade.owner === player) {
       showHitmarker(actor.enemy.dead ? 'kill' : 'torso');
       weaponEffects.playHitmarker({ region: 'torso', killed: actor.enemy.dead });
@@ -2315,8 +2324,13 @@ function getDebugState() {
     loadout: { ...loadout },
     equipment: { ...equipmentAmmo, live: grenades?.activeCount ?? 0, clouds: grenades?.clouds.length ?? 0,
       held: throwState?.item.kind ?? null, cookedSeconds: Number((throwState?.cookedSeconds ?? 0).toFixed(3)) },
+    zombies: enemies?.getState?.() ?? null,
+    interactions: zombieInteractions?.getState() ?? null,
     enemies: enemies?.enemies.map((enemy) => ({
       index: enemy.index,
+      kind: enemy.kind ?? 'soldier',
+      sourceSpawn: enemy.spawnPoint?.markerIndex,
+      spawnZone: enemy.spawnPoint?.zone ?? null,
       position: debugVector(enemy.root.position),
       health: debugRound(enemy.health),
       maxHealth: debugRound(enemy.maxHealth),
@@ -2480,6 +2494,7 @@ function createDebugApi() {
     releaseGrenade(classId = 'lethal') {
       return endGrenade(classId);
     },
+    interact() { return zombieInteractions?.press() ?? false; },
     respawnPlayer() {
       playerHealth?.respawn();
       return getDebugState().player;
@@ -2581,6 +2596,7 @@ document.addEventListener('keydown', (event) => {
     } else if (event.code !== 'Escape') frontend.play();
     return;
   }
+  if (event.code === 'KeyF' && canControlPlayer()) { event.preventDefault(); zombieInteractions?.press(); }
   if (event.code === 'KeyR' && locked) reloadWeapon();
   // 1 and 2 are the class's two guns; the wheel walks between them too.
   if (event.code === 'Digit1' && locked && activeWeaponId !== loadout.primary) switchHeldWeapon(1);
@@ -2758,7 +2774,7 @@ async function start() {
       onDeath: ({ source }) => {
         clearKeys();
         deathSource = source;
-        match.recordKill(combatantId(source), 'player');
+        if (activeMap.id !== 'zm_transit') match.recordKill(combatantId(source), 'player');
         medals?.onDeath();
         player.setEnabled(false);
         weapon.setTrigger(false);
@@ -2777,7 +2793,7 @@ async function start() {
     setDebugVisibility();
 
     const enemyPromise = (navigation
-      ? (enemies = new EnemyManager({
+      ? (enemies = new (activeMap.id === 'zm_transit' ? ZombieManager : EnemyManager)({
           scene,
           navigation,
           collisionWorld,
@@ -2792,11 +2808,11 @@ async function start() {
             const fell = victim.root.position;
             const byPlayer = combatantId(source) === 'player';
             const distance = byPlayer ? player.position.distanceTo(fell) : null;
-            match.recordKill(combatantId(source), `bot-${victim.index}`, distance === null ? null : { distance });
+            if (activeMap.id !== 'zm_transit') match.recordKill(combatantId(source), `bot-${victim.index}`, distance === null ? null : { distance });
             worldAudio?.death({ position: fell.clone() });
             worldAudio?.bodyfall({ surface: surfaceProbe?.surfaceAt(fell), position: fell.clone() });
             // Bot-on-bot kills stay out of the human player's medal chain.
-            if (medals && byPlayer) {
+            if (medals && byPlayer && activeMap.id !== 'zm_transit') {
               const earned = medals.onKill();
               // The game's Long Shot medal, for a kill past LONGSHOT_DISTANCE.
               const longshot = distance >= LONGSHOT_DISTANCE ? medals.def('longshot_kill') : null;
@@ -2812,11 +2828,15 @@ async function start() {
     ).finally(() => frontend.stage('enemy'));
 
     await Promise.all([viewmodelPromise, weaponEffects.loadAudio(), enemyPromise, loadEnvironment()]);
+    if(activeMap.id === 'zm_transit'){
+      zombieInteractions=await new ZombieInteractions({scene,player,camera,collisionWorld,zombies:enemies}).load();
+      enemies.interactions=zombieInteractions;
+    }
     refreshTextureFiltering();
 
     const botNames = ['ADMIRAL', 'CORSAIR', 'DEADEYE', 'MARINER', 'ROGUE', 'VIPER'];
     for (const enemy of enemies?.enemies ?? []) {
-      match.register(`bot-${enemy.index}`, botNames[enemy.index] ?? `BOT ${enemy.index + 1}`);
+      match.register(`bot-${enemy.index}`, activeMap.id === 'zm_transit' ? `ZOMBIE ${enemy.index + 1}` : (botNames[enemy.index] ?? `BOT ${enemy.index + 1}`));
     }
     renderMatchUi();
 
@@ -2831,7 +2851,7 @@ async function start() {
     // still visible. Otherwise the first close enemy can trigger synchronous
     // material compilation in the middle of player movement.
     await renderer.compileAsync(scene, camera);
-    if (enemies?.enemies[0]) {
+    if (enemies?.enemies[0]?.visualFrames) {
       // Shader compilation does not upload vertex buffers or textures. Render
       // every shared baked pose once into a 1 px target so no run frame needs
       // its first GPU upload while the player is already moving.
@@ -2878,7 +2898,7 @@ async function start() {
     // Small read/debug surface for automated smoke tests and map tooling.
     globalThis.hijacked = {
       scene, camera, renderer, player, navigation, collisionRoot, collisionWorld, hints, viewmodel,
-      weapon, weaponEffects, worldAudio, surfaceProbe, destructibles, playerHealth, enemies, reloadWeapon, selectWeapon, frontend,
+      weapon, weaponEffects, worldAudio, surfaceProbe, destructibles, playerHealth, enemies, zombieInteractions, reloadWeapon, selectWeapon, frontend,
       get grenades() { return grenades; },
       get loadout() { return { ...loadout }; },
       get ambience() { return ambience; },
@@ -2941,8 +2961,9 @@ function tick() {
   }
   if (simulationActive && enemySimulationActive) navigation?.update(1 / 60, dt, 5);
   enemies?.update(dt, { active: simulationActive && enemySimulationActive });
+  zombieInteractions?.update(dt,{active:simulationActive,held:controlsActive&&Boolean(keys.KeyF)});
   playerHealth?.update(simulationActive ? dt : 0);
-  if (simulationActive) match.update(dt);
+  if (simulationActive && activeMap.id !== 'zm_transit') match.update(dt);
   weaponEffects.update(dt);
   destructibles?.update(dt);
   if (simulationActive) grenades?.update(dt, { actors: enemies?.actors ?? [] });

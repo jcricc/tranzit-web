@@ -37,7 +37,7 @@ function dampAngle(current, target, lambda, dt) {
   return current + delta * (1 - Math.exp(-lambda * dt));
 }
 
-function animationClip(key, data, root) {
+export function animationClip(key, data, root) {
   const tracks = [];
   for (const bone of data.bones ?? []) {
     const target = findNode(root, bone.name);
@@ -1135,6 +1135,8 @@ export class EnemyManager {
       'mp_tdm_spawn_allies_start',
       'mp_tdm_spawn',
       'mp_dm_spawn',
+      // Zombies exports carry explicit player starts as script_struct hints.
+      'script_struct',
     ];
     this.spawnCandidates = [];
     for (const classname of spawnClassPriority) {

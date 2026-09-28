@@ -1,0 +1,626 @@
+[
+  {
+    "position": [
+      2534.0,
+      -302.0,
+      -275.8
+    ],
+    "yaw": 183.6,
+    "zone": "zone_tbu_spawners",
+    "entry": "labs_baricade4",
+    "target": null,
+    "markerIndex": 11
+  },
+  {
+    "position": [
+      2301.7,
+      -299.0,
+      603.6
+    ],
+    "yaw": 180.0,
+    "zone": "zone_tbu_spawners",
+    "entry": "labs_baricade3",
+    "target": null,
+    "markerIndex": 12
+  },
+  {
+    "position": [
+      1498.4,
+      -297.0,
+      -728.3
+    ],
+    "yaw": 270.0,
+    "zone": "zone_tbu_spawners",
+    "entry": "labs_baricade1",
+    "target": null,
+    "markerIndex": 13
+  },
+  {
+    "position": [
+      478.3,
+      -50.0,
+      58.9
+    ],
+    "yaw": 83.8,
+    "zone": "zone_ban_spawners",
+    "entry": "bank_baricade1",
+    "target": "auto2403",
+    "markerIndex": 16
+  },
+  {
+    "position": [
+      8558.7,
+      50.0,
+      5195.2
+    ],
+    "yaw": 263.0,
+    "zone": "zone_far_ext_spawners",
+    "entry": "farm_baricade4",
+    "target": "auto2396",
+    "markerIndex": 152
+  },
+  {
+    "position": [
+      7981.3,
+      47.9,
+      4525.8
+    ],
+    "yaw": 180.6,
+    "zone": "zone_brn_spawners",
+    "entry": "farm_baricade2",
+    "target": "auto2400",
+    "markerIndex": 155
+  },
+  {
+    "position": [
+      3284.6,
+      -56.0,
+      -175.6
+    ],
+    "yaw": 177.8,
+    "zone": "zone_town_east_spawners",
+    "entry": "town_baricade2",
+    "target": "auto2410",
+    "markerIndex": 170
+  },
+  {
+    "position": [
+      2244.1,
+      89.0,
+      -321.3
+    ],
+    "yaw": 267.2,
+    "zone": "zone_bar_spawners",
+    "entry": "bar_baricade2",
+    "target": "auto2430",
+    "markerIndex": 171
+  },
+  {
+    "position": [
+      733.3,
+      -46.0,
+      866.5
+    ],
+    "yaw": 264.6,
+    "zone": "zone_town_west_spawners",
+    "entry": "barber_baricade3",
+    "target": "auto2428",
+    "markerIndex": 241
+  },
+  {
+    "position": [
+      2900.2,
+      -46.0,
+      1122.3
+    ],
+    "yaw": 84.0,
+    "zone": "zone_town_east_spawners",
+    "entry": "bowling_baricade1",
+    "target": "auto2429",
+    "markerIndex": 242
+  },
+  {
+    "position": [
+      -4501.2,
+      -20.0,
+      8511.1
+    ],
+    "yaw": 359.4,
+    "zone": "zone_gar_spawners",
+    "entry": "gas_baricade2",
+    "target": "auto2458",
+    "markerIndex": 259
+  },
+  {
+    "position": [
+      -5505.5,
+      -13.0,
+      8525.0
+    ],
+    "yaw": 45.0,
+    "zone": "zone_gar_spawners",
+    "entry": "gas_baricade1",
+    "target": "auto2456",
+    "markerIndex": 260
+  },
+  {
+    "position": [
+      -5931.5,
+      29.0,
+      8075.0
+    ],
+    "yaw": 315.0,
+    "zone": "zone_din_spawners",
+    "entry": "diner_baricade2",
+    "target": "auto2455",
+    "markerIndex": 261
+  },
+  {
+    "position": [
+      -6025.5,
+      32.0,
+      8083.0
+    ],
+    "yaw": 225.0,
+    "zone": "zone_din_spawners",
+    "entry": "diner_baricade1",
+    "target": "auto2454",
+    "markerIndex": 262
+  },
+  {
+    "position": [
+      -6440.5,
+      -52.0,
+      -5051.1
+    ],
+    "yaw": 92.1,
+    "zone": "zone_pri_spawners",
+    "entry": "depot_baricade4",
+    "target": "auto2450",
+    "markerIndex": 657
+  },
+  {
+    "position": [
+      -6180.0,
+      -56.0,
+      -5721.1
+    ],
+    "yaw": 180.0,
+    "zone": "zone_pri_spawners",
+    "entry": "depot_baricade2",
+    "target": "auto2447",
+    "markerIndex": 658
+  },
+  {
+    "position": [
+      -7427.2,
+      -58.0,
+      -6730.9
+    ],
+    "yaw": 30.0,
+    "zone": "zone_pri_spawners",
+    "entry": "depot_baricade1",
+    "target": "auto2446",
+    "markerIndex": 1839
+  },
+  {
+    "position": [
+      -7126.3,
+      -56.0,
+      -5104.5
+    ],
+    "yaw": 270.6,
+    "zone": "zone_pri_spawners",
+    "entry": "depot_baricade5",
+    "target": "auto2448",
+    "markerIndex": 1840
+  },
+  {
+    "position": [
+      12629.4,
+      -694.0,
+      -8542.5
+    ],
+    "yaw": 270.0,
+    "zone": "zone_pcr_spawners",
+    "entry": "power_baricade2",
+    "target": "auto2461",
+    "markerIndex": 2009
+  },
+  {
+    "position": [
+      10792.3,
+      -341.0,
+      -9076.6
+    ],
+    "yaw": 184.4,
+    "zone": "zone_pow_warehouse_spawners",
+    "entry": "power_baricade3",
+    "target": "auto2462",
+    "markerIndex": 2010
+  },
+  {
+    "position": [
+      -11320.7,
+      206.2,
+      5315.2
+    ],
+    "yaw": 289.0,
+    "zone": "zone_trans_3_spawners",
+    "entry": "find_flesh",
+    "target": null,
+    "markerIndex": 2261
+  },
+  {
+    "position": [
+      7990.7,
+      122.0,
+      6814.7
+    ],
+    "yaw": 212.6,
+    "zone": "zone_farm_house_spawners",
+    "entry": "farmhouse_baricade2",
+    "target": "auto2460",
+    "markerIndex": 2266
+  },
+  {
+    "position": [
+      7993.8,
+      255.0,
+      6812.5
+    ],
+    "yaw": 206.8,
+    "zone": "zone_farm_house_spawners",
+    "entry": "farmhouse_baricade1",
+    "target": "auto2459",
+    "markerIndex": 2336
+  },
+  {
+    "position": [
+      9198.7,
+      170.0,
+      6363.2
+    ],
+    "yaw": 263.0,
+    "zone": "zone_far_ext_spawners",
+    "entry": "farm_baricade5",
+    "target": "auto2397",
+    "markerIndex": 2544
+  },
+  {
+    "position": [
+      7178.1,
+      -6.0,
+      5496.9
+    ],
+    "yaw": 3.80001,
+    "zone": "zone_far_ext_spawners",
+    "entry": "farm_baricade6",
+    "target": "auto2398",
+    "markerIndex": 2545
+  },
+  {
+    "position": [
+      8557.6,
+      48.0,
+      5037.9
+    ],
+    "yaw": 273.4,
+    "zone": "zone_brn_spawners",
+    "entry": "farm_baricade1",
+    "target": "auto2409",
+    "markerIndex": 2719
+  },
+  {
+    "position": [
+      1316.3,
+      -299.0,
+      381.6
+    ],
+    "yaw": 5.39998,
+    "zone": "zone_tbu_spawners",
+    "entry": "labs_baricade2",
+    "target": null,
+    "markerIndex": 2727
+  },
+  {
+    "position": [
+      530.3,
+      1.0,
+      1418.5
+    ],
+    "yaw": 268.0,
+    "zone": "zone_town_barber_spawners",
+    "entry": "barber_baricade1",
+    "target": "auto2404",
+    "markerIndex": 2897
+  },
+  {
+    "position": [
+      1209.5,
+      38.0,
+      3078.3
+    ],
+    "yaw": 328.6,
+    "zone": "zone_town_church_spawners",
+    "entry": "church_baricade1",
+    "target": "auto2417",
+    "markerIndex": 2898
+  },
+  {
+    "position": [
+      11434.3,
+      -749.0,
+      -7300.4
+    ],
+    "yaw": 4.99999,
+    "zone": "zone_prr_spawners",
+    "entry": "power_baricade1",
+    "target": "auto2463",
+    "markerIndex": 3053
+  },
+  {
+    "position": [
+      13019.1,
+      -754.0,
+      -7382.5
+    ],
+    "yaw": 185.0,
+    "zone": "zone_prr_spawners",
+    "entry": "find_flesh",
+    "target": null,
+    "markerIndex": 3075
+  },
+  {
+    "position": [
+      882.1,
+      -20.0,
+      -887.0
+    ],
+    "yaw": 268.0,
+    "zone": "zone_ban_spawners",
+    "entry": "bank_baricade2",
+    "target": "auto2426",
+    "markerIndex": 3096
+  },
+  {
+    "position": [
+      949.5,
+      -19.9,
+      -888.0
+    ],
+    "yaw": 273.0,
+    "zone": "zone_town_north_spawners",
+    "entry": "bank_baricade3",
+    "target": "auto2469",
+    "markerIndex": 3107
+  },
+  {
+    "position": [
+      2700.1,
+      -28.0,
+      -391.3
+    ],
+    "yaw": 267.2,
+    "zone": "zone_bar_spawners",
+    "entry": "bar_baricade1",
+    "target": "auto2431",
+    "markerIndex": 3108
+  },
+  {
+    "position": [
+      652.7,
+      70.0,
+      924.5
+    ],
+    "yaw": 88.0,
+    "zone": "zone_town_barber_spawners",
+    "entry": "barber_baricade2",
+    "target": "auto2436",
+    "markerIndex": 3127
+  },
+  {
+    "position": [
+      -7110.9,
+      -28.0,
+      -3996.3
+    ],
+    "yaw": 270.0,
+    "zone": "zone_station_ext_spawners",
+    "entry": "depot_baricade6",
+    "target": "auto2451",
+    "markerIndex": 3248
+  },
+  {
+    "position": [
+      -6484.9,
+      -244.0,
+      -5380.5
+    ],
+    "yaw": 6.19999,
+    "zone": "zone_station_ext_spawners",
+    "entry": "depot_baricade3",
+    "target": "auto2449",
+    "markerIndex": 3249
+  },
+  {
+    "position": [
+      -6257.2,
+      -46.0,
+      -4037.3
+    ],
+    "yaw": 258.0,
+    "zone": "zone_station_ext_spawners",
+    "entry": "depot_baricade7",
+    "target": "auto2452",
+    "markerIndex": 3250
+  },
+  {
+    "position": [
+      -10709.7,
+      209.0,
+      1501.2
+    ],
+    "yaw": 279.2,
+    "zone": "zone_amb_tunnel_spawners",
+    "entry": "find_flesh",
+    "target": null,
+    "markerIndex": 3365
+  },
+  {
+    "position": [
+      -10383.7,
+      209.0,
+      432.2
+    ],
+    "yaw": 279.2,
+    "zone": "zone_amb_tunnel_spawners",
+    "entry": "find_flesh",
+    "target": null,
+    "markerIndex": 3366
+  },
+  {
+    "position": [
+      -10485.7,
+      209.0,
+      1195.5
+    ],
+    "yaw": 82.8,
+    "zone": "zone_amb_tunnel_spawners",
+    "entry": "find_flesh",
+    "target": null,
+    "markerIndex": 3367
+  },
+  {
+    "position": [
+      -12125.8,
+      245.0,
+      871.0
+    ],
+    "yaw": 270.8,
+    "zone": "zone_amb_tunnel_spawners",
+    "entry": "find_flesh",
+    "target": null,
+    "markerIndex": 3368
+  },
+  {
+    "position": [
+      -12130.7,
+      251.0,
+      2451.5
+    ],
+    "yaw": 86.8,
+    "zone": "zone_amb_tunnel_spawners",
+    "entry": "find_flesh",
+    "target": null,
+    "markerIndex": 3375
+  },
+  {
+    "position": [
+      -2483.5,
+      252.2,
+      262.0
+    ],
+    "yaw": 180.0,
+    "zone": "zone_amb_bridge_spawners",
+    "entry": "find_flesh",
+    "target": null,
+    "markerIndex": 3414
+  },
+  {
+    "position": [
+      8461.3,
+      48.0,
+      4396.8
+    ],
+    "yaw": 180.6,
+    "zone": "zone_brn_spawners",
+    "entry": "farm_baricade3",
+    "target": "auto2399",
+    "markerIndex": 3448
+  },
+  {
+    "position": [
+      2562.9,
+      348.0,
+      -179.0
+    ],
+    "yaw": 269.8,
+    "zone": "zone_bar_spawners",
+    "entry": "find_flesh",
+    "target": null,
+    "markerIndex": 4227
+  },
+  {
+    "position": [
+      486.2,
+      359.0,
+      1812.5
+    ],
+    "yaw": 358.4,
+    "zone": "zone_town_barber_spawners",
+    "entry": "find_flesh",
+    "target": null,
+    "markerIndex": 4629
+  },
+  {
+    "position": [
+      -3441.0,
+      -62.0,
+      7422.0
+    ],
+    "yaw": 270.0,
+    "zone": "zone_roadside_east_spawners",
+    "entry": "find_flesh",
+    "target": null,
+    "markerIndex": 4707
+  },
+  {
+    "position": [
+      -3441.0,
+      -62.0,
+      7422.0
+    ],
+    "yaw": 270.0,
+    "zone": "zone_roadside_east_spawners",
+    "entry": "find_flesh",
+    "target": null,
+    "markerIndex": 4708
+  },
+  {
+    "position": [
+      11923.4,
+      -678.0,
+      -8762.5
+    ],
+    "yaw": 178.2,
+    "zone": "zone_pow_warehouse_spawners",
+    "entry": "find_flesh",
+    "target": null,
+    "markerIndex": 4841
+  },
+  {
+    "position": [
+      -11334.0,
+      212.7,
+      5280.0
+    ],
+    "yaw": 294.6,
+    "zone": "zone_amb_tunnel_spawners",
+    "entry": "find_flesh",
+    "target": null,
+    "markerIndex": 6656
+  },
+  {
+    "position": [
+      -21.8,
+      -26.0,
+      -179.5
+    ],
+    "yaw": 122.7,
+    "zone": "zone_ban_vault_spawners",
+    "entry": "vault_baricade1",
+    "target": "auto2464",
+    "markerIndex": 7643
+  }
+]

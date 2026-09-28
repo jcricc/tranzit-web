@@ -6,6 +6,8 @@ import { chromium } from 'playwright-core';
 import { runMobileStartup, runMobileTest } from './mobile-game.mjs';
 import { runAdsTest } from './ads-game.mjs';
 import { runSniperTest } from './sniper-game.mjs';
+import { runInteractionsTest } from './interactions-game.mjs';
+import { runZombieTest } from './zombie-game.mjs';
 import { runGraphicsTest } from './graphics-game.mjs';
 
 const root = process.cwd();
@@ -148,7 +150,7 @@ async function run() {
     process.stdout.write(usage());
     return;
   }
-  if (!['state', 'screenshot', 'test', 'enemy-test', 'life-test', 'mobile-test', 'graphics-test', 'sniper-test', 'ads-test', 'record'].includes(command)) {
+  if (!['state', 'screenshot', 'test', 'enemy-test', 'life-test', 'mobile-test', 'graphics-test', 'sniper-test', 'ads-test', 'record', 'interactions-test'].includes(command)) {
     throw new Error(`Unknown command: ${command}\n\n${usage()}`);
   }
 
@@ -227,7 +229,7 @@ async function run() {
     if (command === 'mobile-test') {
       startupChecks = await runMobileStartup(page, artifactRoot, gameUrl);
     } else {
-      const response = await page.goto(gameUrl, { waitUntil: 'domcontentloaded', timeout: 30_000 });
+      const response = await page.goto(gameUrl, { waitUntil: 'commit', timeout: 60_000 });
       if (!response?.ok()) throw new Error(`Game returned HTTP ${response?.status() ?? 'unknown'}`);
     }
     await page.waitForFunction(
@@ -319,6 +321,10 @@ async function run() {
       await page.mouse.up({ button: 'left' });
       inputProbe = await page.evaluate(() => globalThis.__aiMouseProbe);
       await page.evaluate(() => globalThis.hijacked.debug.pause());
+    } else if (command === 'interactions-test') {
+      inputProbe = await runInteractionsTest(page, artifactRoot);
+    } else if (command === 'enemy-test' && before.zombies) {
+      inputProbe = await runZombieTest(page, artifactRoot);
     } else if (command === 'enemy-test') {
       const staged = await page.evaluate(() => {
         const api = globalThis.hijacked;
@@ -356,6 +362,19 @@ async function run() {
         null,
         { timeout: 20_000 },
       );
+      await page.evaluate(() => globalThis.hijacked.debug.pause());
+    } else if (command === 'record' && commandOption === 'zombies') {
+      if (!before.zombies) throw new Error('zombies recording requires the TranZit map');
+      await page.evaluate(() => {
+        const api=globalThis.hijacked,feet=api.player.feetPosition,e=api.enemies.enemies[0];
+        for(const [x,z] of [[0,-200],[-200,0],[200,0],[0,200]]) {
+          if(e.teleport([feet.x+x,feet.y,feet.z+z]) && api.enemies.canSeeTarget(e,api.player,-1)) break;
+        }
+        api.debug.lookAt(e.eyePosition().add({x:0,y:-15,z:0}).toArray());
+        api.debug.resume();
+      });
+      await page.screenshot({path:path.join(artifactRoot,'zombie-record-start.png')});
+      await page.waitForTimeout(recordSeconds * 1000);
       await page.evaluate(() => globalThis.hijacked.debug.pause());
     } else if (command === 'record' && commandOption === 'ads') {
       const started = Date.now();
@@ -413,7 +432,7 @@ async function run() {
     await writeJson('state.json', state);
     await page.screenshot({ path: path.join(artifactRoot, 'screenshot.png') });
 
-    const checks = ['mobile-test', 'graphics-test', 'sniper-test', 'ads-test'].includes(command) ? {
+    const checks = ['mobile-test', 'graphics-test', 'sniper-test', 'ads-test', 'interactions-test'].includes(command) ? {
       ...startupChecks,
       ...inputProbe.checks,
       noBrowserErrors: errors.length === 0,
@@ -424,6 +443,8 @@ async function run() {
       ammoDecreased: state.weapon.magazine < before.weapon.magazine,
       sixEnemiesLoaded: state.enemies.length === 6,
       noBrowserErrors: errors.length === 0,
+    } : command === 'enemy-test' && state.zombies ? {
+      ...inputProbe.checks, noBrowserErrors: errors.length === 0,
     } : command === 'enemy-test' ? {
       ready: state.ready === true,
       sixEnemiesStaged: inputProbe.staged.positions.every(Boolean),

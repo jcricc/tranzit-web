@@ -135,22 +135,28 @@ export class CollisionWorld {
       },
     });
 
-    if (!hit) return false;
+    if (!hit) return this.dynamicWorld?.capsuleIntersect(capsule) ?? false;
     _resolvedCenter.addVectors(_segment.start, _segment.end).multiplyScalar(0.5);
     _normal.subVectors(_resolvedCenter, _originalCenter);
     const depth = _normal.length();
-    return depth > 0 ? { normal: _normal.multiplyScalar(1 / depth).clone(), depth } : false;
+    const result = depth > 0 ? { normal: _normal.multiplyScalar(1 / depth).clone(), depth } : false;
+    const dynamic = this.dynamicWorld?.capsuleIntersect(capsule);
+    return dynamic && (!result || dynamic.depth > result.depth) ? dynamic : result;
   }
 
   raycastFirst(ray, near = 0, far = Infinity, side = THREE.DoubleSide) {
-    return this.bvh.raycastFirst(ray, side, near, far);
+    const hit = this.bvh.raycastFirst(ray, side, near, far);
+    const dynamic = this.dynamicWorld?.raycastFirst(ray, near, far, side);
+    if (dynamic && (!hit || dynamic.distance < hit.distance)) return {...dynamic, collisionGeometry:this.dynamicWorld.geometry};
+    return hit;
   }
 
   rayIntersect(ray, near = 0, far = Infinity) {
     const hit = this.raycastFirst(ray, near, far);
     if (!hit) return false;
-    const index = this.geometry.index;
-    const position = this.geometry.attributes.position;
+    const geometry = hit.collisionGeometry ?? this.geometry;
+    const index = geometry.index;
+    const position = geometry.attributes.position;
     const triangleOffset = hit.faceIndex * 3;
     const a = index ? index.getX(triangleOffset) : triangleOffset;
     const b = index ? index.getX(triangleOffset + 1) : triangleOffset + 1;

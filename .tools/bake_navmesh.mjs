@@ -21,7 +21,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { exportNavMesh, init, NavMeshQuery } from '@recast-navigation/core';
-import { generateSoloNavMesh } from '@recast-navigation/generators';
+import { generateSoloNavMesh, generateTiledNavMesh } from '@recast-navigation/generators';
 
 import { DEFAULT_MAP, MAP_IDS, findMap, mapFiles } from '../export/web/maps.js';
 
@@ -595,7 +595,9 @@ async function main() {
   console.log(`baking ${path.relative(ROOT, input)}: ${source.positions.length / 3} vertices, ${source.indices.length / 3} triangles`);
   console.log(`config: cs=${config.cs}, ch=${config.ch}, height=${config.walkableHeight * config.ch}, climb=${config.walkableClimb * config.ch}, radius=${config.walkableRadius * config.cs}`);
   if (uniqueLinks.length) console.log(`off-mesh connections: ${uniqueLinks.length}`);
-  const generated = generateSoloNavMesh(source.positions, source.indices, config);
+  if (map.navTileSize) config.tileSize = map.navTileSize;
+  const generate = map.navTileSize ? generateTiledNavMesh : generateSoloNavMesh;
+  const generated = generate(source.positions, source.indices, config);
   if (!generated.success || !generated.navMesh) throw new Error(`navmesh generation failed: ${generated.error ?? 'unknown error'}`);
   const bytes = exportNavMesh(generated.navMesh);
 

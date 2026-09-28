@@ -1,0 +1,1930 @@
+{
+  "format": "detour-navmesh",
+  "recastNavigationVersion": "0.43.1",
+  "coordinateSystem": "three-y-up",
+  "source": "export/web/zm_transit_collision.gltf",
+  "geometry": {
+    "vertices": 1137225,
+    "triangles": 1185834
+  },
+  "bounds": {
+    "min": [
+      -12288,
+      -2480,
+      -12506.754485132959
+    ],
+    "max": [
+      16384,
+      3008,
+      11226.164807696856
+    ]
+  },
+  "config": {
+    "cs": 4,
+    "ch": 2,
+    "walkableSlopeAngle": 45,
+    "walkableHeight": 36,
+    "walkableClimb": 9,
+    "walkableRadius": 4,
+    "maxEdgeLen": 12,
+    "maxSimplificationError": 1.3,
+    "minRegionArea": 8,
+    "mergeRegionArea": 20,
+    "maxVertsPerPoly": 6,
+    "detailSampleDist": 6,
+    "detailSampleMaxError": 1,
+    "buildBvTree": true,
+    "bounds": [
+      [
+        -12288,
+        -2480,
+        -12288
+      ],
+      [
+        16384,
+        3008,
+        11200
+      ]
+    ],
+    "tileSize": 256
+  },
+  "offMeshConnections": [
+    {
+      "startPosition": {
+        "x": 1800.9,
+        "y": 112,
+        "z": 113
+      },
+      "endPosition": {
+        "x": 1771.7,
+        "y": -13,
+        "z": 141.9
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 360.4,
+        "y": -9,
+        "z": -566.3
+      },
+      "endPosition": {
+        "x": 440.4,
+        "y": -9,
+        "z": -566.3
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 898.2,
+        "y": -10,
+        "z": 123.1
+      },
+      "endPosition": {
+        "x": 898.2,
+        "y": -10,
+        "z": 43.1
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -4400,
+        "y": -32,
+        "z": 8035
+      },
+      "endPosition": {
+        "x": -4400,
+        "y": -32,
+        "z": 7955
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -5568.1,
+        "y": 31,
+        "z": 8035.4
+      },
+      "endPosition": {
+        "x": -5568.1,
+        "y": 31,
+        "z": 7955.4
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -6432,
+        "y": 31,
+        "z": 8035
+      },
+      "endPosition": {
+        "x": -6432,
+        "y": 31,
+        "z": 7955
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -5032,
+        "y": -30,
+        "z": 8035
+      },
+      "endPosition": {
+        "x": -5032,
+        "y": -30,
+        "z": 7955
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 1924,
+        "y": 119,
+        "z": -212
+      },
+      "endPosition": {
+        "x": 1924,
+        "y": 119,
+        "z": -132
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -7061,
+        "y": -26,
+        "z": -5521
+      },
+      "endPosition": {
+        "x": -7061,
+        "y": -26,
+        "z": -5441
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -7028,
+        "y": -25,
+        "z": -5093
+      },
+      "endPosition": {
+        "x": -7028,
+        "y": -25,
+        "z": -5173
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -6654.86,
+        "y": -25,
+        "z": -4065.3
+      },
+      "endPosition": {
+        "x": -6654.58,
+        "y": -25,
+        "z": -4145.3
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -6449,
+        "y": -25,
+        "z": -5689
+      },
+      "endPosition": {
+        "x": -6449,
+        "y": -25,
+        "z": -5609
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -10639.4,
+        "y": 224,
+        "z": 859.8
+      },
+      "endPosition": {
+        "x": -10718.6,
+        "y": 224,
+        "z": 848.2
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -11905,
+        "y": 271,
+        "z": 1117.8
+      },
+      "endPosition": {
+        "x": -11825,
+        "y": 271,
+        "z": 1118.2
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -11901,
+        "y": 271,
+        "z": 2240.8
+      },
+      "endPosition": {
+        "x": -11821,
+        "y": 271,
+        "z": 2241.2
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -11022.3,
+        "y": 271,
+        "z": 5493.8
+      },
+      "endPosition": {
+        "x": -10951.7,
+        "y": 271,
+        "z": 5456.2
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -11155.3,
+        "y": 271,
+        "z": 4211.9
+      },
+      "endPosition": {
+        "x": -11120.7,
+        "y": 271,
+        "z": 4284.1
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -11008.1,
+        "y": 271,
+        "z": 3503.5
+      },
+      "endPosition": {
+        "x": -10929.9,
+        "y": 271,
+        "z": 3486.5
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -11324.5,
+        "y": 271,
+        "z": 2881.5
+      },
+      "endPosition": {
+        "x": -11311.5,
+        "y": 271,
+        "z": 2802.5
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -10962.7,
+        "y": 271,
+        "z": -832.7
+      },
+      "endPosition": {
+        "x": -11041.3,
+        "y": 271,
+        "z": -847.3
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -10771,
+        "y": 271,
+        "z": 2144.7
+      },
+      "endPosition": {
+        "x": -10820,
+        "y": 271,
+        "z": 2137.3
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -10767,
+        "y": 271,
+        "z": 120.3
+      },
+      "endPosition": {
+        "x": -10803,
+        "y": 271,
+        "z": 191.7
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 12626.5,
+        "y": -681,
+        "z": -7376
+      },
+      "endPosition": {
+        "x": 12653,
+        "y": -681,
+        "z": -7439.2
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 10609.5,
+        "y": -380,
+        "z": -8170.9
+      },
+      "endPosition": {
+        "x": 10609.6,
+        "y": -506.8,
+        "z": -8090.2
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 12523,
+        "y": -721,
+        "z": -8372.3
+      },
+      "endPosition": {
+        "x": 12443,
+        "y": -721,
+        "z": -8372.3
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 11572.3,
+        "y": -725,
+        "z": -7402
+      },
+      "endPosition": {
+        "x": 11572.3,
+        "y": -725,
+        "z": -7482
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 756.7,
+        "y": 159,
+        "z": 1566.6
+      },
+      "endPosition": {
+        "x": 756.7,
+        "y": 159,
+        "z": 1486.6
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 1051.2,
+        "y": 160,
+        "z": 1230.4
+      },
+      "endPosition": {
+        "x": 1092.2,
+        "y": -29,
+        "z": 1230.6
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 7799.28,
+        "y": 147,
+        "z": 6479.24
+      },
+      "endPosition": {
+        "x": 7868.42,
+        "y": 147,
+        "z": 6439
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 7799.28,
+        "y": 276,
+        "z": 6479.24
+      },
+      "endPosition": {
+        "x": 7868.42,
+        "y": 276,
+        "z": 6439
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -6956,
+        "y": -24,
+        "z": -4005.5
+      },
+      "endPosition": {
+        "x": -6956,
+        "y": -24,
+        "z": -4085.5
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -6244.8,
+        "y": -25,
+        "z": -5078.6
+      },
+      "endPosition": {
+        "x": -6244.8,
+        "y": -25,
+        "z": -4998.6
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 7840.7,
+        "y": 148,
+        "z": 6167.8
+      },
+      "endPosition": {
+        "x": 7881.9,
+        "y": 312,
+        "z": 6236.3
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 8106.7,
+        "y": 292,
+        "z": 6221.9
+      },
+      "endPosition": {
+        "x": 8063.4,
+        "y": 145,
+        "z": 6154.7
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 8558,
+        "y": 295,
+        "z": 5354
+      },
+      "endPosition": {
+        "x": 8478,
+        "y": 295,
+        "z": 5354
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 2521.76,
+        "y": -32,
+        "z": 373.894
+      },
+      "endPosition": {
+        "x": 2442,
+        "y": -32,
+        "z": 380.032
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -6636,
+        "y": -66.2,
+        "z": -4744.9
+      },
+      "endPosition": {
+        "x": -6630,
+        "y": -35.8,
+        "z": -4691.1
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -6877.8,
+        "y": -36,
+        "z": -4757.4
+      },
+      "endPosition": {
+        "x": -6824.2,
+        "y": -66.2,
+        "z": -4764.6
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 1328.6,
+        "y": 59,
+        "z": 2975.5
+      },
+      "endPosition": {
+        "x": 1368.6,
+        "y": 59,
+        "z": 2906.22
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 2357.7,
+        "y": -25,
+        "z": 843.1
+      },
+      "endPosition": {
+        "x": 2357.7,
+        "y": -25,
+        "z": 763.1
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 752.4,
+        "y": 151,
+        "z": 831.7
+      },
+      "endPosition": {
+        "x": 832.4,
+        "y": 151,
+        "z": 831.7
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 5078.9,
+        "y": 8,
+        "z": -6619
+      },
+      "endPosition": {
+        "x": 5079.1,
+        "y": 8,
+        "z": -6699
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 5343.9,
+        "y": 8,
+        "z": -6617
+      },
+      "endPosition": {
+        "x": 5344.1,
+        "y": 8,
+        "z": -6697
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 1071.4,
+        "y": 151.5,
+        "z": 771
+      },
+      "endPosition": {
+        "x": 1071.6,
+        "y": 26.5,
+        "z": 729.9
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -2756.3,
+        "y": 119,
+        "z": 304.1
+      },
+      "endPosition": {
+        "x": -2813.7,
+        "y": -9,
+        "z": 359.9
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -2707,
+        "y": 269,
+        "z": 264
+      },
+      "endPosition": {
+        "x": -2772,
+        "y": 211,
+        "z": 263
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 10736.5,
+        "y": -494.3,
+        "z": -8110.1
+      },
+      "endPosition": {
+        "x": 10736.4,
+        "y": -380,
+        "z": -8178.8
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -6762.1,
+        "y": -36,
+        "z": -4833.7
+      },
+      "endPosition": {
+        "x": -6753.9,
+        "y": -66.2,
+        "z": -4780.3
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 2636.6,
+        "y": -5.7,
+        "z": 241
+      },
+      "endPosition": {
+        "x": 2636.4,
+        "y": -49.1,
+        "z": 282.1
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 2510.9,
+        "y": 356,
+        "z": 20.4
+      },
+      "endPosition": {
+        "x": 2469.8,
+        "y": 254,
+        "z": 20.4
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 2148.9,
+        "y": 253,
+        "z": -101.4
+      },
+      "endPosition": {
+        "x": 2148.9,
+        "y": 151,
+        "z": -52.3
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 13491,
+        "y": -156,
+        "z": 1530
+      },
+      "endPosition": {
+        "x": 13575,
+        "y": -156,
+        "z": 1530
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 14036,
+        "y": -156,
+        "z": 1027
+      },
+      "endPosition": {
+        "x": 13952,
+        "y": -156,
+        "z": 1027
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 10550.2,
+        "y": -541.466,
+        "z": -7814.89
+      },
+      "endPosition": {
+        "x": 10498.8,
+        "y": -541.183,
+        "z": -7927.73
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 10440.6,
+        "y": -544.779,
+        "z": -7901.25
+      },
+      "endPosition": {
+        "x": 10492,
+        "y": -545.063,
+        "z": -7788.41
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 8856.06,
+        "y": 143,
+        "z": 6528.17
+      },
+      "endPosition": {
+        "x": 8787.78,
+        "y": 143,
+        "z": 6486.49
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 7628.82,
+        "y": 67,
+        "z": 5039.4
+      },
+      "endPosition": {
+        "x": 7708.82,
+        "y": 67,
+        "z": 5040.23
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 8566.48,
+        "y": 75,
+        "z": 5461.03
+      },
+      "endPosition": {
+        "x": 8490.31,
+        "y": 75,
+        "z": 5485.49
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 7801,
+        "y": 75,
+        "z": 4591
+      },
+      "endPosition": {
+        "x": 7801,
+        "y": 75,
+        "z": 4671
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 8190,
+        "y": 79,
+        "z": 4533
+      },
+      "endPosition": {
+        "x": 8190,
+        "y": 79,
+        "z": 4613
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 1236.75,
+        "y": -28.98,
+        "z": -831.982
+      },
+      "endPosition": {
+        "x": 1275.47,
+        "y": -28.98,
+        "z": -949.778
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 1214.68,
+        "y": -28.98,
+        "z": -969.768
+      },
+      "endPosition": {
+        "x": 1175.95,
+        "y": -28.98,
+        "z": -851.971
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -137.26,
+        "y": -15.05,
+        "z": 50.3603
+      },
+      "endPosition": {
+        "x": -244.66,
+        "y": -22.38,
+        "z": 111.9
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -4667.48,
+        "y": -36,
+        "z": 7402.38
+      },
+      "endPosition": {
+        "x": -4556.32,
+        "y": -36,
+        "z": 7347.42
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -4584.68,
+        "y": -36,
+        "z": 7290.05
+      },
+      "endPosition": {
+        "x": -4695.84,
+        "y": -36,
+        "z": 7345
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 1326.5,
+        "y": -273,
+        "z": -376.7
+      },
+      "endPosition": {
+        "x": 1246.5,
+        "y": -273,
+        "z": -376.7
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 1474.7,
+        "y": -273,
+        "z": 280.5
+      },
+      "endPosition": {
+        "x": 1474.7,
+        "y": -273,
+        "z": 200.5
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 1954.7,
+        "y": -273,
+        "z": 280.5
+      },
+      "endPosition": {
+        "x": 1954.7,
+        "y": -273,
+        "z": 200.5
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 2259.3,
+        "y": -273,
+        "z": 26.5
+      },
+      "endPosition": {
+        "x": 2259.3,
+        "y": -273,
+        "z": 106.5
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 1636.2,
+        "y": 52.2,
+        "z": 1690
+      },
+      "endPosition": {
+        "x": 1637.8,
+        "y": -34,
+        "z": 1640.9
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 1375.4,
+        "y": 53.2,
+        "z": 1652.1
+      },
+      "endPosition": {
+        "x": 1388.7,
+        "y": -34,
+        "z": 1604.8
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 1729.9,
+        "y": -22.6,
+        "z": 1661.3
+      },
+      "endPosition": {
+        "x": 1714,
+        "y": 70.9,
+        "z": 1707.8
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 982,
+        "y": 342,
+        "z": 1521.6
+      },
+      "endPosition": {
+        "x": 951.2,
+        "y": 224,
+        "z": 1483.4
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 10709.3,
+        "y": -532,
+        "z": -7974.78
+      },
+      "endPosition": {
+        "x": 10718.7,
+        "y": -532,
+        "z": -7891.31
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 10754.5,
+        "y": -532,
+        "z": -7869.53
+      },
+      "endPosition": {
+        "x": 10777.4,
+        "y": -532,
+        "z": -7950.35
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 11123.1,
+        "y": -529,
+        "z": -7583.5
+      },
+      "endPosition": {
+        "x": 11203.8,
+        "y": -694,
+        "z": -7583.6
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -3839,
+        "y": -28,
+        "z": 7531
+      },
+      "endPosition": {
+        "x": -3839,
+        "y": -28,
+        "z": 7447
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -3564,
+        "y": -28,
+        "z": 7536
+      },
+      "endPosition": {
+        "x": -3564,
+        "y": -28,
+        "z": 7452
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -6142.2,
+        "y": 94,
+        "z": 8127
+      },
+      "endPosition": {
+        "x": -6142.8,
+        "y": 175,
+        "z": 8076.9
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -5800.2,
+        "y": 110,
+        "z": 8050
+      },
+      "endPosition": {
+        "x": -5800.8,
+        "y": 284,
+        "z": 7998.9
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 10977.9,
+        "y": -494.3,
+        "z": -8445.5
+      },
+      "endPosition": {
+        "x": 10909.2,
+        "y": -380,
+        "z": -8445.4
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -5599,
+        "y": 259.3,
+        "z": 7786.6
+      },
+      "endPosition": {
+        "x": -5397.9,
+        "y": -36,
+        "z": 7786.4
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -5684.6,
+        "y": -34.7,
+        "z": 7446
+      },
+      "endPosition": {
+        "x": -5684.4,
+        "y": 258,
+        "z": 7647.1
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -6327.4,
+        "y": 259.3,
+        "z": 7647
+      },
+      "endPosition": {
+        "x": -6327.6,
+        "y": -36,
+        "z": 7445.9
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 8879,
+        "y": 78,
+        "z": 5697
+      },
+      "endPosition": {
+        "x": 8795,
+        "y": 78,
+        "z": 5697
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 8890,
+        "y": 115,
+        "z": 6052
+      },
+      "endPosition": {
+        "x": 8806,
+        "y": 115,
+        "z": 6052
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 11648,
+        "y": -545,
+        "z": -8759
+      },
+      "endPosition": {
+        "x": 11648,
+        "y": -545,
+        "z": -8675
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 11725.5,
+        "y": -548,
+        "z": -8440.9
+      },
+      "endPosition": {
+        "x": 11725.6,
+        "y": -597,
+        "z": -8388.2
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 11291.9,
+        "y": -387.3,
+        "z": -8530.2
+      },
+      "endPosition": {
+        "x": 11227.3,
+        "y": -535,
+        "z": -8506.6
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -6570.1,
+        "y": -66.2,
+        "z": -4756.6
+      },
+      "endPosition": {
+        "x": -6515.9,
+        "y": -35.8,
+        "z": -4757.4
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -6176,
+        "y": 24,
+        "z": 7785
+      },
+      "endPosition": {
+        "x": -6176,
+        "y": 24,
+        "z": 7680
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -5846,
+        "y": 24,
+        "z": 7680
+      },
+      "endPosition": {
+        "x": -5846,
+        "y": 24,
+        "z": 7785
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -6128,
+        "y": 24,
+        "z": 7680
+      },
+      "endPosition": {
+        "x": -6128,
+        "y": 24,
+        "z": 7785
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -5894,
+        "y": 24,
+        "z": 7785
+      },
+      "endPosition": {
+        "x": -5894,
+        "y": 24,
+        "z": 7680
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 11020,
+        "y": -326,
+        "z": -8844
+      },
+      "endPosition": {
+        "x": 11140,
+        "y": -326,
+        "z": -8844
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 11140,
+        "y": -326,
+        "z": -8896
+      },
+      "endPosition": {
+        "x": 11020,
+        "y": -326,
+        "z": -8896
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 13938,
+        "y": -156,
+        "z": 1707
+      },
+      "endPosition": {
+        "x": 13938,
+        "y": -156,
+        "z": 1623
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 1738.74,
+        "y": -36,
+        "z": 298.85
+      },
+      "endPosition": {
+        "x": 1852.37,
+        "y": -36,
+        "z": 348.25
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 919,
+        "y": -36,
+        "z": 333
+      },
+      "endPosition": {
+        "x": 1027,
+        "y": -36,
+        "z": 272
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 11800.5,
+        "y": -638.1,
+        "z": -7686.9
+      },
+      "endPosition": {
+        "x": 11818.5,
+        "y": -728,
+        "z": -7637.2
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 11732.1,
+        "y": -639,
+        "z": -7695.6
+      },
+      "endPosition": {
+        "x": 11718.9,
+        "y": -728,
+        "z": -7644.5
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -6228,
+        "y": 179,
+        "z": 8074
+      },
+      "endPosition": {
+        "x": -6228,
+        "y": 179,
+        "z": 7990
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 10629.7,
+        "y": -321,
+        "z": -8981
+      },
+      "endPosition": {
+        "x": 10629.7,
+        "y": -321,
+        "z": -8901
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 8205.04,
+        "y": 292,
+        "z": 5220.77
+      },
+      "endPosition": {
+        "x": 8226.18,
+        "y": 76,
+        "z": 5143.72
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -4468.7,
+        "y": -36,
+        "z": 7453.4
+      },
+      "endPosition": {
+        "x": -4469,
+        "y": -36,
+        "z": 7523.5
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -4411.3,
+        "y": -36,
+        "z": 7524.6
+      },
+      "endPosition": {
+        "x": -4411,
+        "y": -36,
+        "z": 7454.5
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 700,
+        "y": -9,
+        "z": -647
+      },
+      "endPosition": {
+        "x": 700,
+        "y": -9,
+        "z": -567
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 10578.9,
+        "y": -319,
+        "z": -8630.5
+      },
+      "endPosition": {
+        "x": 10498.2,
+        "y": -506.8,
+        "z": -8630.4
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -5607,
+        "y": -36,
+        "z": 7413
+      },
+      "endPosition": {
+        "x": -5499,
+        "y": -36,
+        "z": 7352
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -6437.92,
+        "y": -25,
+        "z": -5237.18
+      },
+      "endPosition": {
+        "x": -6493.89,
+        "y": -25,
+        "z": -5180.02
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 845,
+        "y": -24,
+        "z": 812
+      },
+      "endPosition": {
+        "x": 845,
+        "y": -24,
+        "z": 732
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 1073,
+        "y": -9,
+        "z": -808
+      },
+      "endPosition": {
+        "x": 1153,
+        "y": -9,
+        "z": -808
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 2529,
+        "y": -25,
+        "z": -374
+      },
+      "endPosition": {
+        "x": 2449,
+        "y": -25,
+        "z": -374
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -6300,
+        "y": 94,
+        "z": 7950.8
+      },
+      "endPosition": {
+        "x": -6249.9,
+        "y": 175,
+        "z": 7950.2
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -6292,
+        "y": 15,
+        "z": -5385.8
+      },
+      "endPosition": {
+        "x": -6350.1,
+        "y": 189,
+        "z": -5385.2
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": -6574,
+        "y": 176,
+        "z": -5367.8
+      },
+      "endPosition": {
+        "x": -6629.1,
+        "y": -28,
+        "z": -5367.2
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    },
+    {
+      "startPosition": {
+        "x": 11936,
+        "y": -721,
+        "z": -8433
+      },
+      "endPosition": {
+        "x": 11936,
+        "y": -721,
+        "z": -8517
+      },
+      "radius": 20,
+      "bidirectional": false,
+      "area": 0,
+      "flags": 1
+    }
+  ],
+  "pathnodes": {
+    "total": 5350,
+    "projected": 5335
+  },
+  "byteLength": 15451228
+}

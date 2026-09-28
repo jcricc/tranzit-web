@@ -573,8 +573,15 @@ def script_model_instances(root: str, map_name: str) -> List[Dict]:
     """
 
     instances: List[Dict] = []
-    for entity in _parse_entities(_map_source(root, map_name, "ents")):
-        if entity.get("classname", "").lower() != "script_model":
+    entities = _parse_entities(_map_source(root, map_name, "ents"))
+    # Buyable zombie doors are loaded separately so opening removes collision.
+    dynamic_doors = {e.get("target") for e in entities if e.get("targetname") == "zombie_door" and "zombie_cost" in e} if map_name == "zm_transit" else set()
+    for entity in entities:
+        if entity.get("targetname") in dynamic_doors:
+            continue
+        classname = entity.get("classname", "").lower()
+        # Zombies' authored bus is a vehicle entity; export its parked pose.
+        if classname != "script_model" and not (map_name.startswith("zm_") and classname == "script_vehicle"):
             continue
         model = entity.get("model", "")
         if not model or model in _SCRIPT_MODEL_SKIP or model.startswith(_SCRIPT_MODEL_SKIP_PREFIXES):
@@ -679,9 +686,12 @@ def _entity_hints(root: str, map_name: str) -> Dict:
         # Objective flag entities are not playable spawn points.  Include all
         # mode/team starts and ordinary DM/TDM points, including *_OT_start.
         if (
-            lower_classname.startswith("mp_")
+            (lower_classname.startswith("mp_")
             and "_spawn" in lower_classname
-            and "flag" not in lower_classname
+            and "flag" not in lower_classname)
+            or (map_name.startswith("zm_") and lower_classname == "script_struct"
+                and entity.get("targetname") == "initial_spawn_points"
+                and "zclassic_transit" in entity.get("script_string", ""))
         ):
             angles = _parse_float_vector(entity.get("angles", "0 0 0")) or [0.0, 0.0, 0.0]
             game_yaw = float(angles[1])
