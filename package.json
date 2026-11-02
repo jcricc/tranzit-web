@@ -53,7 +53,7 @@
   "homepage": "https://vibeslops.luckeysystems.com/",
   "dependencies": {
     "@netlify/blobs": "^11.0.2",
-    "@recast-navigation/core": "0.43.1",
+    "@recast-navigation/core": "0.44.0",
     "@recast-navigation/generators": "0.43.1",
     "@recast-navigation/three": "0.43.1",
     "three": "0.185.1",
